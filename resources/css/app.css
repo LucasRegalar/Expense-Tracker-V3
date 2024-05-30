@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'AgenorNeue';
+    src: url(/resources/fonts/agenorneue-regular-webfont.woff2) format('woff2'),
+    url(/resources/fonts/agenorneue-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*TODO Waeum funktionirt import nicht? */
+@import 'scrollbar.css';
+/* Custom scrollbar styles */
+  .scrollbar::-webkit-scrollbar-track {
+    background: #3a3b3c;  /* Color of the track */
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #242526;  /* Color of the scrollbar thumb */
+    border-radius: 4px;  /* Round the corners */
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: darkred;  /* Color when hovering over the scrollbar thumb */
+  }
+  
+  /* Firefox support */
+  .scrollbar {
+    scrollbar-width: thin;  /* Thin scrollbar */
+    scrollbar-color: #242526 #3a3b3c;  /* Thumb color and track color */
+  }
