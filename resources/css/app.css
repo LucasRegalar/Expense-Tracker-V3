@@ -1,0 +1,23 @@
+@import 'font-sizes.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'AgenorNeue';
+    src: url(/resources/fonts/agenorneue-regular-webfont.woff2) format('woff2'),
+    url(/resources/fonts/agenorneue-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+

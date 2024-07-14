@@ -1,66 +1,163 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Project - Expense & Income Tracker
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This Project shall serve both as a real life working simulation and an IHK-like exam-project to kinda "finish" my training.
+I will simulate the real life working environment with my friend Sebestion (Rose), an experienced Laravel developer, as my Project Manager.
+We will have weekly meeting in which I will present him my new code and we can talk my progress. He will review my code, mark problematic sections, help me with problems and confront me with challenges I could face in a real job as well. I this READ ME I will try to document the important parts of our Meetings and general information.  
 
-## About Laravel
+## Preliminary Considerations and Notes for me
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Git
+- Main for Production (Laravel)
+- Development Branch
+- Feature Branch (theoretisch für jedes Feature, wir nehmen nur einen)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Git commit messages
+- Bug-Fix: 'fix(dashboard): "(This commit will...) fix the table view for..."'
+- Feature: 'feat(dashboard): "(This commit will...) add the table view for..."'
+- TO DO nie committen!
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Quelltext Dokumentation -> Comments for all methods etc.
 
-## Learning Laravel
+Facharbeit
+- Was bedeutet es?
+- Welches Problem?
+- Warum codest du es selbst? -> creativ sein weil es natürlich eigentlich schon genug expense Tracker gibt
+- Tech-Stack
+- UML-Klassen-Diagramm
+- Datenbank Struktur mit Draw SQL.APP
+- Budget -> wie lange in Stunden? Wie viel bei 24,5€?
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Pflichtenheft
+- kommt von Kunden und beinhaltet was er will
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Lasenheft
+- verfasse ich auf Grundlage des Pflichtenhefts und schicke dem Kunden darin was ich machen kann/will. Kunde unterzeichnet das Lastenheft.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Notiz: App 'offen' bauen!!! Rose kommt am Ende noch mit extra features.
 
-## Laravel Sponsors
+## Lastenheft
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Authentication and Authorization
+- 2x Usertypen -> Premiumuser
+- Graphische Anzeige (Eingabe, Ausgabe, Balance)
+- Software soll Einkommen und Ausgaben tracken
+- Daueraufträge
+- Gesamtbalance, monatliche Balance -> evtl. flexible Auswahl
+- Kategorien (sellbst löschen hinzufügen) -> Premium eigene Icons hochladen?
+- Tabellarische Übersicht letzten 5 
+- Tabellarische Übersicht mit Filtern
+- Profilfoto
+- Dark-Bright-Modus
+- Responsive
 
-### Premium Partners
+## 1. Protokoll 18. Mai 2024
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Anfangsaufgaben:
+- TechStack -> erklären warum
+- Budget berechnen -> in pt(8std.) ich brauche für die 8 pt so und so lange, weil ich nur so und so viel arbeite
+- UML-Klassen-Diagramm -> wird sich wahrscheinlich von der späteren App unterscheiden
+- Datenbank-Struktur -> wird aktuell gehalten
+- Interface
+- Abgabe Termin überlegen (1. Juli?)
 
-## Contributing
+## Tech-Stalk
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Laravel
+    - starkes Framework mit guter Dokumentation
+    - deckt das Front- und das Backend ab
+    - viele Laravel Features nehmen Arbeit ab (bspw. Validation)
+- TablePlus (SQLite)
+    - It's free
+    - SQLite, weil es für unsere Datenbank schon ausreicht
+- TailwindCSS
+    - starkes Framework mit guter Dokumentation
+    - Zeitersparnis beim coden
+- ChartJS
+    - einfache implementierung verschiedenster Graphen
+- Font-Awesome Icons
+    - schöne free & comercial use icons
 
-## Code of Conduct
+## Budget (1pt = 8 Arbeitsstunden)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- Interface inkls. Design -> 3 pt
+- Datenbankstruktur + Eloquent Relations -> 0.5 pt
+- Tabellarische Übersicht mit Filtern -> 0.5 pt
+- Restliche grundliegende Logik -> 0.5 pt
+- Add Transaction -> 0.5 pt
+- Daueraufträge -> 1 pt
+- Kategorien hinzufügen -> 0.5 pt
+- Premium: Eigene Icons -> 0.5 pt
+- Profilfoto hinzufügen -> 0.25 pt
+- graphische Anzeige -> 0.5 pt
 
-## Security Vulnerabilities
+Insgesamt: 7.75 + 25% (Puffer + weil ich das erste mal mit Laravel & Tailwind arbeite) ca. 10 pt.
+Bei 20 Arbeitsstunden die Woche ca. 4 Wochen. -> Ungefähre Abgabe 27.06.24
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Datenbank-Struktur
 
-## License
+https://drawsql.app/teams/lucas-team-47/diagrams/expensetracker
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## UML-Klassen-Diagramm
+https://lucid.app/lucidchart/e04d31ae-82bf-4945-a196-01f75c85c3b0/edit?invitationId=inv_8033e0b3-05ff-479d-a1ed-bf59b846f631&page=0_0#
+
+Teilbarer-Link
+https://lucid.app/lucidchart/e04d31ae-82bf-4945-a196-01f75c85c3b0/edit?viewport_loc=509%2C-685%2C2813%2C1230%2C0_0&invitationId=inv_8033e0b3-05ff-479d-a1ed-bf59b846f631
+
+
+## 2. Protokoll 26. Mai 2024
+
+Transkript:
+- Besprechung Datenbank-Struktur -> ein paar Änderungen
+- Besprechen UML-Klassen-Diagram -> Erweiterung um Controller, aber keine Models 
+- Feature: Jeder Transaktion können bis zu zwei Kategorien zugeordnet werden. Davon ist eine die Hauptkategorie
+
+Aufgaben:
+- UML-Klassen-Diagramm überarbeiten (check)
+- Datenbank-Struktur überarbeiten (check)
+
+
+## 3. Protokoll 4. Juni 2024
+
+Stand: 
+- UI quasi fertig (inkl. Responsivness)
+- Models, Factories, Migrations, Seeding steht soweit
+- Income index, store, create, delete läuft
+- Session Login & Logout funktioniert
+
+Feedback:
+- das UML Klassendiagramm passt soweit (wir haben noch 1-2 kleine Änderungen vorgenommen)
+- ich muss auf jeden Fall edit features ergänzen (wahrscheinlich als Modal und dann schauen wie man die Routes benennt. Gibt es best Practices?)
+- Email, Passwort etc. ändern, Passwort vergessen, Account löschen
+- transaction filtering, incomes / expense mit query parameter? url?..
+- nur Transaction view, mit filtern und create form + query Parameter
+- Paginator ergänzen
+- show view Transaction ja oder nein auch wegen hover -> wahrscheinlich ja
+
+- MYSQL -> 
+- GITHUB Pull request wenn feature fertig ist.
+- keine Ressources
+
+Notizen:
+- mit Modal die Edit Sachen? edit route wird in Modal reingeladen. (evtl. zu komplex) -> mit manage?
+- category.create: mit + icon.create Modal (Dialog Datei hochladen, "Laravel file uplaod dialig / package)
+- Gates -> das restricted und Policies -> das erlaubt durch funktionen
+
+Aufgaben:
+- Files löschen (check)
+- Polimorph -> Category_transaction_standingorders
+- Email, Passwort etc. ändern, Passwort vergessen, Account löschen
+- edit features (check)
+- Paginator (check)
+- transaction.index für alles (check)
+
+### Notizen ###
+
+- Daueraufträge mit einem scheduled command
+
+### Fragen Rose ###
+
+- Transactioncontroller.index refactor?
+
+## TO-DO am Ende ##
+
+- Dark / Bright- Mode 
