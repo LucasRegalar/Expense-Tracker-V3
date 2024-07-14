@@ -15,11 +15,16 @@ export default {
         'secondary-card': '#242526',
         'border-card': '#3a3b3c',
         'main-red': '#d93879',
-        'main-green': '#28BE8C',
+        'hover-red': '#ab2158',
+        'main-green': '#24a87c',
+        'hover-green': '#1b7e5d',
       },
       fontFamily: {
         "body": ['AgenorNeue', 'sans-serif']
       },
+      fontSize: {
+        "2xs": '0.625rem',
+      }
     },
   },
   plugins: [],

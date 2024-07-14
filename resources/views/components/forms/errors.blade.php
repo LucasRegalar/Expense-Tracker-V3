@@ -1,5 +1,5 @@
 @if ($errors->any())
-    <div class="text-sm text-main-red my-2">
+    <div {{ $attributes->merge(['class' => "text-sm text-main-red my-2", 'id' => 'errors']) }}>
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>

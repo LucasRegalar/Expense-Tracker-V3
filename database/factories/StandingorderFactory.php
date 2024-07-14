@@ -19,6 +19,7 @@ class StandingorderFactory extends Factory
     {
         return [
             'title' => 'standingorder ' . fake()->word,
+            'type' => fake()->randomElement(['income', 'expense']),
             'starting_date' => fake()->dateTimeBetween('-6 months', 'now')->format('Y-m-d'),
             'end_date' => null,
             'interval' => fake()->randomElement(['daily', 'weekly', 'monthly', 'quarterly', 'yearly']),

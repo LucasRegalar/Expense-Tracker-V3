@@ -13,7 +13,7 @@
     <main>
         <div class="w-full flex">
             <x-nav></x-nav>
-            <x-primary-card {{ $attributes->merge(['class' => 'w-full']) }}>
+            <x-primary-card {{ $attributes->merge(['class' => 'w-full relative']) }}>
                 {{ $slot }}
             </x-primary-card>
         </div>

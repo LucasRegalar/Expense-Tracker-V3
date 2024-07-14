@@ -15,6 +15,7 @@ return new class extends Migration
         Schema::create('standingorders', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->enum('type', ['income','expense']);
             $table->date('starting_date');
             $table->date('end_date')->nullable();
             $table->enum('interval', ['daily', 'weekly', 'monthly', 'quarterly', 'yearly']);

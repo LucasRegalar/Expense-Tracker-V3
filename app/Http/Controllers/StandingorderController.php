@@ -5,15 +5,25 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreStandingorderRequest;
 use App\Http\Requests\UpdateStandingorderRequest;
 use App\Models\Standingorder;
+use App\Models\Category;
+use App\Services\StandingorderService;
 
 class StandingorderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    protected $standingorderService;
+
+    public function __construct(StandingorderService $standingorderService)
+    {
+        $this->standingorderService = $standingorderService;
+    }
     public function index()
     {
-        //
+
+        $categories = $this->standingorderService->getCategories();
+
+        return view('standingorders', [
+            'categories' => $categories,
+        ]);
     }
 
     /**
@@ -28,14 +38,6 @@ class StandingorderController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StoreStandingorderRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Standingorder $standingorder)
     {
         //
     }

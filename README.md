@@ -106,34 +106,58 @@ https://lucid.app/lucidchart/e04d31ae-82bf-4945-a196-01f75c85c3b0/edit?viewport_
 
 ## 2. Protokoll 26. Mai 2024
 
-Inhalt:
+Transkript:
 - Besprechung Datenbank-Struktur -> ein paar Änderungen
 - Besprechen UML-Klassen-Diagram -> Erweiterung um Controller, aber keine Models 
-- Feature: Jeder Transaktion können bis zu drei Kategorien zugeordnet werden. Davon ist eine die Hauptkategorie
+- Feature: Jeder Transaktion können bis zu zwei Kategorien zugeordnet werden. Davon ist eine die Hauptkategorie
 
 Aufgaben:
-- UML-Klassen-Diagramm überarbeiten
-- Datenbank-Struktur überarbeiten
+- UML-Klassen-Diagramm überarbeiten (check)
+- Datenbank-Struktur überarbeiten (check)
 
+
+## 3. Protokoll 4. Juni 2024
+
+Stand: 
+- UI quasi fertig (inkl. Responsivness)
+- Models, Factories, Migrations, Seeding steht soweit
+- Income index, store, create, delete läuft
+- Session Login & Logout funktioniert
+
+Feedback:
+- das UML Klassendiagramm passt soweit (wir haben noch 1-2 kleine Änderungen vorgenommen)
+- ich muss auf jeden Fall edit features ergänzen (wahrscheinlich als Modal und dann schauen wie man die Routes benennt. Gibt es best Practices?)
+- Email, Passwort etc. ändern, Passwort vergessen, Account löschen
+- transaction filtering, incomes / expense mit query parameter? url?..
+- nur Transaction view, mit filtern und create form + query Parameter
+- Paginator ergänzen
+- show view Transaction ja oder nein auch wegen hover -> wahrscheinlich ja
+
+- MYSQL -> 
+- GITHUB Pull request wenn feature fertig ist.
+- keine Ressources
+
+Notizen:
+- mit Modal die Edit Sachen? edit route wird in Modal reingeladen. (evtl. zu komplex) -> mit manage?
+- category.create: mit + icon.create Modal (Dialog Datei hochladen, "Laravel file uplaod dialig / package)
+- Gates -> das restricted und Policies -> das erlaubt durch funktionen
+
+Aufgaben:
+- Files löschen (check)
+- Polimorph -> Category_transaction_standingorders
+- Email, Passwort etc. ändern, Passwort vergessen, Account löschen
+- edit features (check)
+- Paginator (check)
+- transaction.index für alles (check)
 
 ### Notizen ###
 
-- Modals % Migrations etc. first
-- Transactions-Form -> Autotoggle bei - oder +. Was bei 0?
 - Daueraufträge mit einem scheduled command
-
 
 ### Fragen Rose ###
 
-- Dark Mode in RegisteredUserController oder extra Profilcontroller (PrefrencesController)?
-- Dark Mode in Datenbank speichern und dann mit in profil-settings changen?
-- wo bzw. was für controller,migrations,models,factories, seeders, policies, requests?
-- kann ich eine Transaction->catepries() Eloquent Relation aufbauen ? (pivot Table)
-- Kann ich auf Datenbank Ebene categories für Transactions als pflichtfeld einbauen? (Pivot Table)
-- Kann ich in meiner transaction factory direkt eine Categorie hinzufügen? (Pivot Table)
-- SQLite always have to run PRAGMA foreign_keys = ON; after I migrate:fresh?
-- wie und wann git commiten?
+- Transactioncontroller.index refactor?
 
 ## TO-DO am Ende ##
 
-- responsive design für sehr kleine width
+- Dark / Bright- Mode 

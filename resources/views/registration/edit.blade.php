@@ -5,6 +5,7 @@
                 <h1>Manage your Account</h1>
             </x-primary-heading>
             <form class="mt-3 grid gap-3 text-sm" action="">
+                <x-forms.input name='username' value="{{ Auth::user()->username }}" />
                 <div class="flex gap-3">
                     <label class="text-left ml-3" for="premium">Premium?</label>
                     <input type="checkbox" name='premium' id='premium' />
@@ -16,7 +17,7 @@
                 <input type="file" id="picture" name="picture" placeholder=""
                     class="w-full bg-primary-card border border-border-card py-2 px-4 rounded-lg focus:outline-none"
                     required="">
-                <x-forms.submit-btn class="mx-auto">Safe changes</x-forms.submit-btn>
+                <x-forms.submit-btn--red class="mx-auto">Safe changes</x-forms.submit-btn>
             </form>
         </div>
     </x-secondary-card>

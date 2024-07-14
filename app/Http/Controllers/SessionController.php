@@ -20,7 +20,7 @@ class SessionController extends Controller
             'password' => ['required']
         ]);
         
-        if (Auth::validate($credentials)) {
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             /* The intended method will redirect the user to the URL they were attempting to access before being intercepted by the authentication middleware. 
             A fallback URI may be given to this method in case the intended destination is not available. */
@@ -34,10 +34,13 @@ class SessionController extends Controller
 
     public function destroy(Request $request)
     {
+        // Logs user out by removing authentication information from the session
         Auth::logout();
 
+        // Invalidates the current session and regenerates the session ID. This ensures that the session data is not reused.
         $request->session()->invalidate();
 
+        // Regenerates the CSRF token to prevent CSRF attacks.
         $request->session()->regenerateToken();
 
         return redirect('/');

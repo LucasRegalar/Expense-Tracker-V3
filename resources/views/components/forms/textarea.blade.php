@@ -1,4 +1,4 @@
-@props(['name', 'placeholder' => '', 'class' => ''])
+@props(['name', 'placeholder' => '', 'class' => '', 'label' => 'false'])
 
 @php
     $defaults= [
@@ -11,5 +11,5 @@
 @endphp
 
 
-<label class="hidden" for='{{ $name }}'></label>
-<textarea {{ $attributes($defaults) }} required minlength="1" maxlength="30" rows="4"></textarea>
+<label class="{{ $label === 'true' ? '' : 'hidden' }}" for='{{ $name }}'>{{ ucfirst($name)}}</label>
+<textarea {{ $attributes($defaults) }} required minlength="1" maxlength="30" rows="2">{{ $slot }}</textarea>

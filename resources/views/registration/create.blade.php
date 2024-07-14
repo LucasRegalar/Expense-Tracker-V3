@@ -1,5 +1,5 @@
 <x-layout class="grid items-center justify-center">
-    <x-secondary-card class="text-center w-80" style="width: 30rem">
+    <x-secondary-card class="text-center w-[80vw] max-w-[30rem]">
         <div class="m-5">
             <x-primary-heading class="text-xl">
                 <h1>Create an account</h1>

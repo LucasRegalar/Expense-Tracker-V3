@@ -20,6 +20,7 @@ class CategoryFactory extends Factory
     {
         return [
             'title' => 'cat. ' . fake()->word,
+            'type' => fake()->randomElement(['income', 'expense']),
             'image_id' => Image::factory(),
             'user_id' => User::factory(),
         ];
